@@ -21,18 +21,12 @@ function fetch(prop, arg, dot, e, sig) {
       status = r.status
 
       if (!ok) {
-        if (dot.log) {
-          dot.log("error", {
-            status: status,
-            url: arg.url,
-          })
-        }
-
-        if (!arg.lax) {
-          throw new Error(
-            "Fetch failed (status code: " + r.status + ")"
-          )
-        }
+        throw new Error(
+          "Request to " +
+            arg.url +
+            " failed, status code: " +
+            r.status
+        )
       } else if (arg.text) {
         return r.text()
       } else if (arg.json || arg.url.match(/\.json$/)) {
@@ -49,6 +43,15 @@ function fetch(prop, arg, dot, e, sig) {
 
       if (arg.store && dot.set) {
         return dot.set(prop, body)
+      }
+    })
+    .catch(function(err) {
+      if (dot.log) {
+        dot.log("error", err.toString())
+      }
+
+      if (!arg.lax) {
+        throw new Error(err)
       }
     })
 }
