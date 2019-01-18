@@ -9,8 +9,7 @@ beforeEach(function() {
 })
 
 test("fetch", function(done) {
-  var url =
-    "https://morgue.stage.inverse.com/videos?sort=-publish_at"
+  var url = "https://jsonplaceholder.typicode.com/todos/1"
 
   dot
     .fetch({
