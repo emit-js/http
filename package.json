@@ -24,16 +24,16 @@
     "isomorphic-unfetch": "3.0.0"
   },
   "devDependencies": {
-    "@dot-event/log": "next2",
-    "@dot-event/store": "next2",
-    "dot-event": "next2",
+    "@dot-event/log": "1.0.11",
+    "@dot-event/store": "7.0.10",
+    "dot-event": "3.0.29",
     "eslint": "5.12.0",
     "eslint-config-prettier": "3.3.0",
     "eslint-plugin-prettier": "3.0.1",
-    "prettier": "1.15.3",
     "husky": "1.3.1",
+    "jest": "23.6.0",
     "lint-staged": "8.1.0",
-    "jest": "23.6.0"
+    "prettier": "1.15.3"
   },
   "operations": {
     "starter": {},
