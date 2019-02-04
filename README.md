@@ -36,3 +36,7 @@ const { body, ok, status } = await dot.fetch({
 | json   | Parse response body                                                |
 | store  | Save response body to [store](https://github.com/dot-event/store2) |
 | url    | Request URL                                                        |
+
+## Credit
+
+This library uses [isomorphic-unfetch](https://github.com/developit/unfetch/tree/master/packages/isomorphic-unfetch) under the hood.
