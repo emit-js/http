@@ -1,6 +1,6 @@
 # @dot-event/fetch
 
-dot-event universal HTTP fetch
+[dot-event](https://github.com/dot-event/dot-event2#readme) universal HTTP fetch
 
 ![supernova](supernova.gif)
 
