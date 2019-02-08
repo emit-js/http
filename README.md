@@ -1,6 +1,6 @@
 # @dot-event/fetch
 
-[dot-event](https://github.com/dot-event/dot-event2#readme) universal HTTP fetch
+[dot-event](https://github.com/dot-event/dot-event#readme) universal HTTP fetch
 
 ![supernova](supernova.gif)
 
@@ -31,11 +31,11 @@ const { body, ok, status } = await dot.fetch({
 
 ## Options
 
-| Option | Description                                                        |
-| ------ | ------------------------------------------------------------------ |
-| json   | Parse response body                                                |
-| store  | Save response body to [store](https://github.com/dot-event/store2) |
-| url    | Request URL                                                        |
+| Option | Description                                                       |
+| ------ | ----------------------------------------------------------------- |
+| json   | Parse response body                                               |
+| store  | Save response body to [store](https://github.com/dot-event/store) |
+| url    | Request URL                                                       |
 
 ## Credit
 
