@@ -1,15 +1,14 @@
 /* eslint-env jest */
 
-var dot = require("dot-event")()
-var log = require("@dot-event/log")
-var store = require("@dot-event/store")
-var fetch = require("./")
+var dot,
+  fetch = require("./"),
+  log = require("@dot-event/log"),
+  store = require("@dot-event/store")
 
 var url = "https://jsonplaceholder.typicode.com/todos/1"
 
 beforeEach(function() {
-  dot.reset()
-
+  dot = require("dot-event")()
   fetch(dot)
   log(dot)
 })
