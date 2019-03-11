@@ -1,13 +1,9 @@
 var unfetch = require("isomorphic-unfetch")
 
-module.exports = function(dot, opts) {
-  var state = dot.state
-
-  if (state.fetch) {
+module.exports = function(dot) {
+  if (dot.fetch) {
     return
   }
-
-  state.fetch = opts || {}
 
   dot.any("fetch", fetch)
 }
