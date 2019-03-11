@@ -24,7 +24,7 @@
     "isomorphic-unfetch": "3.0.0"
   },
   "devDependencies": {
-    "@dot-event/log": "1.0.18",
+    "@dot-event/log": "1.0.21",
     "@dot-event/store": "7.0.15",
     "dot-event": "3.1.2",
     "eslint": "5.15.1",
