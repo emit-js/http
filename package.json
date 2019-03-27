@@ -1,6 +1,6 @@
 {
   "name": "@dot-event/fetch",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "dot-event fetch",
   "keywords": [
     "dot-event",
@@ -24,7 +24,7 @@
     "isomorphic-unfetch": "3.0.0"
   },
   "devDependencies": {
-    "@dot-event/log": "1.0.32",
+    "@dot-event/log": "1.0.33",
     "@dot-event/store": "7.0.17",
     "dot-event": "3.2.1",
     "eslint": "5.15.1",
