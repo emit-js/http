@@ -35,13 +35,6 @@
     "lint-staged": "8.1.5",
     "prettier": "1.16.4"
   },
-  "operations": {
-    "starter": {},
-    "git": {},
-    "link": {},
-    "spawn": {},
-    "version": {}
-  },
   "eslintConfig": {
     "env": {
       "node": true
