@@ -25,7 +25,7 @@ function http(arg, prop, emit, sig) {
         )
       } else if (arg.text) {
         return r.text()
-      } else if (arg.json || arg.url.match(/\.json$/)) {
+      } else {
         return r.json()
       }
     })

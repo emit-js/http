@@ -14,17 +14,12 @@ beforeEach(function() {
 })
 
 test("http", function() {
-  return emit
-    .http({
-      json: true,
-      url: url,
-    })
-    .then(function(out) {
-      expect(out.body).toEqual(expect.any(Object))
-      expect(out.ok).toBe(true)
-      expect(out.status).toBe(200)
-      expect(out.url).toBe(url)
-    })
+  return emit.http({ url: url }).then(function(out) {
+    expect(out.body).toEqual(expect.any(Object))
+    expect(out.ok).toBe(true)
+    expect(out.status).toBe(200)
+    expect(out.url).toBe(url)
+  })
 })
 
 test("http and store", function() {
@@ -34,7 +29,6 @@ test("http and store", function() {
 
   return emit
     .http("todos", {
-      json: true,
       store: true,
       url: url,
     })
@@ -48,7 +42,6 @@ test("http error", function() {
 
   return emit
     .http("todos", {
-      json: true,
       store: true,
       url: "http://does-no-exist",
     })
