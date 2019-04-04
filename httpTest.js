@@ -1,21 +1,21 @@
 /* eslint-env jest */
 
-var dot,
-  fetch = require("./"),
-  log = require("@dot-event/log"),
-  store = require("@dot-event/store")
+var emit,
+  http = require("./"),
+  log = require("@emit-js/log"),
+  store = require("@emit-js/store")
 
 var url = "https://jsonplaceholder.typicode.com/todos/1"
 
 beforeEach(function() {
-  dot = require("dot-event")()
-  fetch(dot)
-  log(dot)
+  emit = require("@emit-js/emit")()
+  http(emit)
+  log(emit)
 })
 
-test("fetch", function() {
-  return dot
-    .fetch({
+test("http", function() {
+  return emit
+    .http({
       json: true,
       url: url,
     })
@@ -27,27 +27,27 @@ test("fetch", function() {
     })
 })
 
-test("fetch and store", function() {
+test("http and store", function() {
   expect.assertions(1)
 
-  store(dot)
+  store(emit)
 
-  return dot
-    .fetch("todos", {
+  return emit
+    .http("todos", {
       json: true,
       store: true,
       url: url,
     })
     .then(function() {
-      expect(dot.get("todos")).toEqual(expect.any(Object))
+      expect(emit.get("todos")).toEqual(expect.any(Object))
     })
 })
 
-test("fetch error", function() {
+test("http error", function() {
   expect.assertions(1)
 
-  return dot
-    .fetch("todos", {
+  return emit
+    .http("todos", {
       json: true,
       store: true,
       url: "http://does-no-exist",

@@ -1,19 +1,21 @@
 {
-  "name": "@dot-event/fetch",
+  "name": "@emit-js/http",
   "version": "0.0.15",
-  "description": "dot-event fetch",
+  "description": "emit universal http fetch",
   "keywords": [
-    "dot-event",
-    "fetch"
+    "emit",
+    "universal",
+    "http",
+    "request"
   ],
-  "author": "dot-event <oss@dot-event.io>",
-  "main": "fetch.js",
+  "author": "emit <emit@emit-js.com>",
+  "main": "http.js",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/dot-event/fetch.git"
+    "url": "git+ssh://git@github.com/emit-js/http.git"
   },
   "license": "MIT",
-  "homepage": "https://github.com/dot-event/fetch#readme",
+  "homepage": "https://github.com/emit-js/http#readme",
   "scripts": {
     "fix": "npm run lint -- --fix",
     "lint": "eslint --ignore-path .gitignore --ext=js .",
@@ -24,14 +26,14 @@
     "isomorphic-unfetch": "3.0.0"
   },
   "devDependencies": {
-    "@dot-event/log": "1.0.34",
-    "@dot-event/store": "7.0.18",
-    "dot-event": "3.2.2",
+    "@emit-js/emit": "3.2.3",
+    "@emit-js/log": "1.0.34",
+    "@emit-js/store": "7.0.18",
     "eslint": "5.16.0",
     "eslint-config-prettier": "4.1.0",
     "eslint-plugin-prettier": "3.0.1",
     "husky": "1.3.1",
-    "jest": "24.5.0",
+    "jest": "24.7.1",
     "lint-staged": "8.1.5",
     "prettier": "1.16.4"
   },

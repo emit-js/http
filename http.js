@@ -1,17 +1,17 @@
-var unfetch = require("isomorphic-unfetch")
+var fetch = require("isomorphic-unfetch")
 
-module.exports = function(dot) {
-  if (dot.fetch) {
+module.exports = function(emit) {
+  if (emit.http) {
     return
   }
 
-  dot.any("fetch", fetch)
+  emit.any("http", http)
 }
 
-function fetch(prop, arg, dot, e, sig) {
+function http(arg, prop, emit, sig) {
   var ok, status
 
-  return unfetch(arg.url, arg)
+  return fetch(arg.url, arg)
     .then(function(r) {
       ok = r.ok
       status = r.status
@@ -37,13 +37,13 @@ function fetch(prop, arg, dot, e, sig) {
         url: arg.url,
       }
 
-      if (arg.store && dot.set) {
-        return dot.set(prop, body)
+      if (arg.store && emit.set) {
+        return emit.set(prop, body)
       }
     })
     .catch(function(err) {
-      if (dot.log) {
-        dot.log("error", err.toString())
+      if (emit.log) {
+        emit.log("error", err.toString())
       }
 
       if (!arg.lax) {

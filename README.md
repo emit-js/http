@@ -1,13 +1,13 @@
-# @dot-event/fetch
+# @emit-js/http
 
-[dot-event](https://github.com/dot-event/dot-event#readme) universal HTTP fetch
+[emit](https://github.com/emit-js/emit#readme) universal http fetch
 
-![supernova](supernova.gif)
+![http](http.gif)
 
 ## Install
 
 ```bash
-npm install dot-event @dot-event/fetch
+npm install @emit-js/emit @emit-js/http
 ```
 
 ## Universal
@@ -17,25 +17,25 @@ This library works both server and client side.
 ## Setup
 
 ```js
-const dot = require("dot-event")()
-require("@dot-event/fetch")(dot)
+const emit = require("@emit-js/emit")()
+require("@emit-js/http")(emit)
 ```
 
 ## Usage
 
 ```js
-const { body, ok, status } = await dot.fetch({
+const { body, ok, status } = await emit.http({
   url: "https://google.com",
 })
 ```
 
 ## Options
 
-| Option | Description                                                       |
-| ------ | ----------------------------------------------------------------- |
-| json   | Parse response body                                               |
-| store  | Save response body to [store](https://github.com/dot-event/store) |
-| url    | Request URL                                                       |
+| Option | Description                                                     |
+| ------ | --------------------------------------------------------------- |
+| json   | Parse response body                                             |
+| store  | Save response body to [store](https://github.com/emit-js/store) |
+| url    | Request URL                                                     |
 
 ## Credit
 
