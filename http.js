@@ -37,7 +37,9 @@ function http(arg, prop, emit, sig) {
         url: arg.url,
       }
 
-      emit("log", "info", prop, sig.value)
+      if (arg.log) {
+        emit("log", "info", prop, sig.value)
+      }
 
       if (arg.store && emit.set) {
         return emit.set(prop, body)
