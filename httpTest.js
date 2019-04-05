@@ -15,11 +15,19 @@ beforeEach(function() {
 
 test("http", function() {
   return emit.http({ url: url }).then(function(out) {
-    expect(out.body).toEqual(expect.any(Object))
-    expect(out.ok).toBe(true)
-    expect(out.status).toBe(200)
-    expect(out.url).toBe(url)
+    expect(out).toEqual(expect.any(Object))
   })
+})
+
+test("http (full)", function() {
+  return emit
+    .http({ full: true, url: url })
+    .then(function(out) {
+      expect(out.body).toEqual(expect.any(Object))
+      expect(out.ok).toBe(true)
+      expect(out.status).toBe(200)
+      expect(out.url).toBe(url)
+    })
 })
 
 test("http and store", function() {

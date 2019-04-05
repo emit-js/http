@@ -30,14 +30,16 @@ function http(arg, prop, emit, sig) {
       }
     })
     .then(function(body) {
-      sig.value = {
+      var response = {
         body: body,
         ok: ok,
         status: status,
         url: arg.url,
       }
 
-      emit("httpResponse", prop, sig.value)
+      sig.value = arg.full ? response : body
+
+      emit("httpResponse", prop, response)
 
       if (arg.store && emit.set) {
         return emit.set(prop, body)
