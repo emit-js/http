@@ -37,14 +37,14 @@ function http(arg, prop, emit, sig) {
         url: arg.url,
       }
 
+      emit("log", "info", prop, sig.value)
+
       if (arg.store && emit.set) {
         return emit.set(prop, body)
       }
     })
     .catch(function(err) {
-      if (emit.log) {
-        emit.log("error", err.toString())
-      }
+      emit("log", "error", prop, err.toString())
 
       if (!arg.lax) {
         throw new Error(err)
