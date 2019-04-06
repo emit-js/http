@@ -36,8 +36,8 @@ const { body, ok, status } = await emit.http({
 
 | Option | Description                                                     |
 | ------ | --------------------------------------------------------------- |
-| json   | Parse response body                                             |
 | store  | Save response body to [store](https://github.com/emit-js/store) |
+| text   | Return text (don't JSON parse)                                  |
 | url    | Request URL                                                     |
 
 ## Credit
