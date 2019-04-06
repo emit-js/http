@@ -24,7 +24,10 @@ require("@emit-js/http")(emit)
 ## Usage
 
 ```js
+const body = await emit.http({ url: "https://google.com" })
+
 const { body, ok, status } = await emit.http({
+  full: true,
   url: "https://google.com",
 })
 ```
