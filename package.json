@@ -1,6 +1,6 @@
 {
   "name": "@emit-js/http",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "emit universal http fetch",
   "keywords": [
     "emit",
